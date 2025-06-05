@@ -16,4 +16,5 @@ function fibsRec(number, array = [0, 1]) {
     return fibsRec(number, array)
 }
 
+console.log(fibs(8))
 console.log(fibsRec(8))

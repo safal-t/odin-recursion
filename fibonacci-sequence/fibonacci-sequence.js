@@ -8,11 +8,12 @@ function fibs(number) {
 
 
 function fibsRec(number, array = [0, 1]) {
-    if (number === 0) {
-        return
-    }
     array.push(array.at(-1) + array.at(-2))
-    return array.push(fibs(number - 1))
+    if (array.length >= number) {
+        return array
+    }
+    array.push(array.at(-1) + array.at(-2));
+    return fibsRec(number, array)
 }
 
 console.log(fibsRec(8))
